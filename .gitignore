@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*$pyd.*
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Pytest / Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.tox-local/
+.cache/
+
+# SQLite / Generated data
+*.db
+*.db-journal
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+.AppleDouble
+.LSObjectives
+
+# Logs
+*.log
+*.out
+
+# IDE
+.history/
+
+# Jupyter
+.ipynb_checkpoints/
+.jupyter/
+
+# Development scratch files
+_smoke_*.py
+_verify_*.js
+FINALIZATION_PLAN.md
