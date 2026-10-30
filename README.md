@@ -33,7 +33,7 @@ Most apps give you generic prices from global pet stores — useless when a basi
 
 | Light Theme | Dark Theme |
 |-------------|------------|
-| <img src="docs/demo1.png" width="480" alt="Light theme - Auto-Architect dashboard" /> | <img src="docs/demo2.png" width="480" alt="Dark theme - Species catalog grid" /> |
+| ![Light Theme](https://placehold.co/800x400/F8FAFC/0F172A?text=Light+Theme+Screenshot+Coming+Soon) | ![Dark Theme](https://placehold.co/800x400/0F172A/2DD4BF?text=Dark+Theme+Screenshot+Coming+Soon) |
 
 ---
 
@@ -173,4 +173,4 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 If AquaPulse helps you build a better aquarium, please consider starring this repository! It helps the project grow and reach more aquarists.
 
-[![star](https://github.com/aquapulse/aquapulse/raw/refs/heads/main/badge.svg)](https://github.com/aquapulse/aquapulse)
+[![GitHub Repo stars](https://img.shields.io/github/stars/NafisAfzal/aquapulse?style=social)](https://github.com/NafisAfzal/aquapulse)
