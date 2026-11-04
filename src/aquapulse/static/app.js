@@ -15,6 +15,7 @@ const I18N = {
     "nav.home": "🏠 Home Aquarium",
     "nav.farm": "🚜 Commercial Fish Farming Calculator",
     "hero.kicker": "🐠 Priced for the Bangladesh market",
+    "hero.title": "Plan a beautiful aquarium — easily, worry-free.",
     "hero.title1": "Plan a beautiful aquarium,",
     "hero.title2": "easily and worry-free.",
     "hero.sub": "Know which fish can live together and exactly what it costs — a package for your budget, at Dhaka market prices.",
@@ -30,19 +31,37 @@ const I18N = {
     "opt.b.desc": "Pick fish, plants and cleaners yourself — we'll check if they get along.",
     "auto.title": "Find the best setup for you",
     "auto.sub": "Answer 3 quick questions, that's it!",
-    "auto.budget": "Your budget (৳ Taka)",
+    "auto.budget": "Budget (BDT)",
+    "auto.budget.usd": "Budget (USD)",
+    "currency.bdt": "BDT",
+    "climate.summer": "Tropical Summer (30–33°C)",
+    "climate.winter": "Winter Indoor (18–20°C)",
+    "climate.controlled": "Climate Controlled (24–25°C)",
     "auto.size": "Tank size",
     "auto.size.small": "Small (20 L)",
     "auto.size.med": "Medium (40 L)",
     "auto.size.large": "Large (75 L)",
-    "auto.size.xl": "Extra Large (120 L)",
+    "auto.size.xl": "Extra Large (150 L)",
     "auto.style": "What kind of tank do you want?",
     "auto.goal1": "Calm, colorful community fish",
     "auto.goal2": "Easy, low-maintenance tank",
-    "auto.goal3": "Shrimp & live plants tank",
-    "auto.goal4": "One big showpiece fish",
+    "auto.goal3": "Vibrant centerpiece",
+    "auto.goal4": "Shrimp breeding colony",
     "auto.btn": "🔍 Find the Best Setup for Me",
     "auto.pick": "Select This Setup",
+    "mode.wizard": "Auto-Architect",
+    "mode.manual": "Manual Planner",
+    "mode.commercial": "Commercial",
+    "auto.tanksize": "Tank size (liters)",
+    "auto.goal": "What kind of tank do you want?",
+    "auto.climate": "Climate",
+    "btn.analyze": "Generate Setup",
+    "btn.simulate": "Simulate",
+    "results.title": "Your Build Options",
+    "results.sub": "Three ranked blueprints - pick your favourite.",
+    "saved.title": "Saved Builds",
+    "catalog.title": "Species Catalog",
+    "catalog.sub": "Browse compatible fish, shrimp, snails and plants.",
     "pick.title": "Pick your fish, plants and cleaners",
     "pick.sub": "Tap + to add more of each.",
     "pick.search": "Search by name…",
@@ -95,9 +114,10 @@ const I18N = {
     "farm.target": "Harvest weight (g)",
     "farm.days": "Culture days",
     "farm.temp": "Water temperature (°C)",
-    "farm.feed": "Feed price (৳/kg)",
-    "farm.fry": "Fingerling price (৳/pc)",
-    "farm.price": "Market price (৳/kg)",
+    "farm.feed": "Feed price (BDT/kg)",
+    "farm.fry": "Fingerling price (BDT/pc)",
+    "farm.price": "Market price (BDT/kg)",
+    "farm.ph": "pH",
     "farm.run": "📊 Calculate",
     "kpi.net": "Net Profit",
     "kpi.roi": "Return (ROI)",
@@ -120,6 +140,7 @@ const I18N = {
     "nav.home": "🏠 বাসার অ্যাকোয়ারিয়াম",
     "nav.farm": "🚜 বাণিজ্যিক মাছ চাষ ক্যালকুলেটর",
     "hero.kicker": "🐠 বাংলাদেশের বাজারের দামে বানানো",
+    "hero.title": "সুন্দর সামঞ্জস্যপূর্ণ অ্যাকোয়ারিয়াম বানান — সহজে, নিশ্চিন্তে।",
     "hero.title1": "সুন্দর অ্যাকোয়ারিয়াম বানান,",
     "hero.title2": "সহজে আর নিশ্চিন্তে।",
     "hero.sub": "কোন মাছ একসাথে বাঁচবে, আর কত খরচ হবে — সব আগেই জেনে নিন। বাজেট অনুযায়ী প্যাকেজ, ঢাকার বাজারদরে।",
@@ -136,18 +157,36 @@ const I18N = {
     "auto.title": "আপনার জন্য সেরা সেটআপ খুঁজছি",
     "auto.sub": "৩টি প্রশ্নের উত্তর দিন, ব্যস!",
     "auto.budget": "আপনার বাজেট (৳ টাকা)",
+    "auto.budget.usd": "বাজেট (USD)",
+    "currency.bdt": "৳ BDT",
+    "climate.summer": "গ্রীষ্মের ঘর (৩০–৩৩°C)",
+    "climate.winter": "শীতের ঘর (১৮–২০°C)",
+    "climate.controlled": "নিয়ন্ত্রিত তাপমাত্রা (২৪–২৫°C)",
     "auto.size": "ট্যাংকের সাইজ",
     "auto.size.small": "ছোট (২০ লিটার)",
     "auto.size.med": "মাঝারি (৪০ লিটার)",
     "auto.size.large": "বড় (৭৫ লিটার)",
-    "auto.size.xl": "খুব বড় (১২০ লিটার)",
+    "auto.size.xl": "খুব বড় (১৫০ লিটার)",
     "auto.style": "কেমন ট্যাংক চান?",
     "auto.goal1": "শান্ত আর রঙিন মাছের ট্যাংক",
     "auto.goal2": "সহজ, কম যত্নের ট্যাংক",
-    "auto.goal3": "চিংড়ি আর গাছের ট্যাংক",
-    "auto.goal4": "একটা বড় আকর্ষণীয় মাছের ট্যাংক",
+    "auto.goal3": "আকর্ষণীয় প্রধান মাছের ট্যাংক",
+    "auto.goal4": "চিংড়ি প্রজননের ট্যাংক",
     "auto.btn": "🔍 আমার জন্য সেরা সেটআপ খুঁজুন",
     "auto.pick": "এই সেটআপটি বেছে নিন",
+    "mode.wizard": "স্মার্ট আর্কিটেক্ট",
+    "mode.manual": "ম্যানুয়াল প্ল্যানার",
+    "mode.commercial": "বাণিজ্যিক",
+    "auto.tanksize": "ট্যাংকের সাইজ (লিটার)",
+    "auto.goal": "কেমন ট্যাংক চান?",
+    "auto.climate": "জলবায়ু",
+    "btn.analyze": "সেটআপ তৈরি করুন",
+    "btn.simulate": "সিমুলেট করুন",
+    "results.title": "আপনার বিল্ড অপশনগুলো",
+    "results.sub": "তিনটি র্যাঙ্ক করা ব্লুপ্রিন্ট — পছন্দমতো বাছুন।",
+    "saved.title": "সংরক্ষিত বিল্ডগুলো",
+    "catalog.title": "প্রজাতির তালিকা",
+    "catalog.sub": "সামঞ্জস্যপূর্ণ মাছ, চিংড়ি, শামুক আর গাছ ব্রাউজ করুন।",
     "pick.title": "মাছ, গাছ আর ক্লিনার বাছুন",
     "pick.sub": "প্রতিটি কার্ডে + চেপে সংখ্যা বাড়ান।",
     "pick.search": "নাম লিখে খুঁজুন…",
@@ -203,6 +242,7 @@ const I18N = {
     "farm.feed": "খাবারের দাম (৳/কেজি)",
     "farm.fry": "পোনার দাম (৳/পিস)",
     "farm.price": "বাজার দাম (৳/কেজি)",
+    "farm.ph": "pH",
     "farm.run": "📊 হিসাব করুন",
     "kpi.net": "মোট লাভ",
     "kpi.roi": "রিইটার্ন (ROI)",
@@ -258,22 +298,61 @@ const state = {
   species: [],
   stocking: new Map(),
   analysis: null,
+  currentBlueprint: null,
   cycleSteps: null,
   blueprints: [],
   commercial: null,
   exchangeRate: 120,
   spFilter: "all",
   spSearch: "",
+  budgetBdt: 8000,
+  panel: "auto",
 };
 
 /* ---------------- i18n helpers ---------------- */
 function t(key) { return (I18N[state.lang] && I18N[state.lang][key]) || (I18N.en[key]) || key; }
 function applyI18n() {
+  document.documentElement.lang = state.lang;
+  $("#toast").textContent = "";
+  $("#toast").classList.remove("show");
   document.body.dataset.lang = state.lang;
   $$("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
   $$("[data-i18n-ph]").forEach((el) => { el.placeholder = t(el.dataset.i18nPh); });
   document.title = state.lang === "bn" ? "AquaPulse Pro · আপনার অ্যাকোয়ারিয়াম, সহজ ও সুন্দর"
                                         : "AquaPulse Pro · Plan your aquarium beautifully";
+  renderBudgetControls();
+}
+
+// Localize display text only. Input values and API payloads remain numeric.
+function localizeDigits(value) {
+  return String(value).replace(/[0-9০-৯]/g, (digit) => {
+    const n = digit >= "০" ? digit.charCodeAt(0) - "০".charCodeAt(0) : Number(digit);
+    return state.lang === "bn" ? "০১২৩৪৫৬৭৮৯"[n] : String(n);
+  });
+}
+function formatNum(value, fractionDigits = 0) {
+  if (value == null || value === "" || !Number.isFinite(Number(value))) return "—";
+  return Number(value).toLocaleString(state.lang === "bn" ? "bn-BD" : "en-IN", {
+    minimumFractionDigits: fractionDigits, maximumFractionDigits: fractionDigits,
+  });
+}
+function bdtPrefix() { return state.lang === "bn" ? "৳" : "BDT "; }
+
+function renderBudgetControls(updateInput = false) {
+  const input = $("#budget-input");
+  const usd = state.currency === "USD";
+  $("label[for='budget-input']").textContent = t(usd ? "auto.budget.usd" : "auto.budget");
+  input.min = usd ? (500 / state.exchangeRate).toFixed(2) : "500";
+  input.max = usd ? (200000 / state.exchangeRate).toFixed(2) : "200000";
+  input.step = usd ? "0.01" : "1";
+  if (updateInput) input.value = usd ? (state.budgetBdt / state.exchangeRate).toFixed(2) : String(state.budgetBdt);
+  $$(".budget-pill").forEach((pill) => {
+    const bdt = Number(pill.dataset.budget);
+    pill.textContent = usd ? "$" + formatNum(bdt / state.exchangeRate) : bdtPrefix() + formatNum(bdt);
+    const active = Math.abs(state.budgetBdt - bdt) < 0.01;
+    pill.classList.toggle("active", active);
+    pill.setAttribute("aria-pressed", String(active));
+  });
 }
 
 /* ---------------- Theme engine ---------------- */
@@ -314,10 +393,10 @@ async function api(path, body) {
 
 /* ---------------- Currency formatting ---------------- */
 function fmtMoney(usd) {
-  if (state.currency === "BDT") return "৳" + Math.round(usd * state.exchangeRate).toLocaleString("en-IN");
-  return "$" + usd.toFixed(2);
+  if (state.currency === "BDT") return fmtMoneyBdt(usd);
+  return "$" + formatNum(usd, 2);
 }
-function fmtMoneyBdt(usd) { return "৳" + Math.round(usd * state.exchangeRate).toLocaleString("en-IN"); }
+function fmtMoneyBdt(usd) { return bdtPrefix() + formatNum(usd * state.exchangeRate); }
 
 function spName(id) {
   const meta = SPECIES_META[id];
@@ -345,6 +424,9 @@ function toast(msg) {
 /* ---- Species grid (manual pick) ---- */
 function renderSpeciesGrid() {
   const grid = $("#sp-grid");
+  const focused = document.activeElement;
+  const focusKey = focused?.hasAttribute("data-inc") ? "inc" : focused?.hasAttribute("data-dec") ? "dec" : null;
+  const focusSpecies = focusKey ? focused.dataset[focusKey] : null;
   grid.innerHTML = "";
   const q = state.spSearch.trim().toLowerCase();
   const filtered = state.species.filter((s) => {
@@ -365,13 +447,17 @@ function renderSpeciesGrid() {
       : (state.lang === "bn" ? "পানি পরিষ্কার রাখে" : "Cleaner");
 
     const card = document.createElement("div");
-    card.className = "sp-card";
+    const category = s.category === "plant" ? "plant" : s.category === "invertebrate" ? "invert"
+      : s.aggression_rating >= 0.7 ? "aggressive" : temper === "aggressive" ? "semi" : "peaceful";
+    card.className = `sp-card sp-card--${category}${count > 0 ? " is-selected" : ""}`;
+    card.dataset.speciesId = s.id;
     card.innerHTML = `
+      ${count > 0 ? `<span class="sp-qty-pill">×${formatNum(count)}</span>` : ""}
       <div class="sp-head">
         <div class="sp-emoji">${meta.emoji}</div>
         <div>
           <div class="sp-name">${state.lang === "bn" ? meta.bn : meta.en}</div>
-          <div class="sp-sci">${state.lang === "bn" ? meta.en : meta.bn}</div>
+          <div class="sp-sci">${s.scientific_name}</div>
         </div>
       </div>
       <div class="sp-desc">${s.description}</div>
@@ -380,10 +466,10 @@ function renderSpeciesGrid() {
         <span class="sp-badge ${temper}">${badge}</span>
       </div>
       <div class="stepper">
-        <span style="font-size:13px;color:#64748B">${s.size_cm} cm · ${state.lang === "bn" ? "জীবন" : "tank"} ≥${s.min_tank_gal} gal</span>
+        <span class="sp-size">${localizeDigits(s.size_cm)} cm · ${state.lang === "bn" ? "ট্যাংক" : "tank"} ≥${formatNum(s.min_tank_gal)} gal</span>
         <div class="stepper-btns">
           <button data-dec="${s.id}" aria-label="decrease">−</button>
-          <span class="val">${count}</span>
+          <span class="val">${formatNum(count)}</span>
           <button data-inc="${s.id}" aria-label="increase">+</button>
         </div>
       </div>`;
@@ -396,6 +482,7 @@ function renderSpeciesGrid() {
     grid.innerHTML = `<div style="grid-column:1/-1;color:#64748B;text-align:center;padding:30px">${state.lang === "bn" ? "কোনো কিছু পাওয়া যায়নি" : "Nothing found"}</div>`;
   }
   updateTabCounts();
+  if (focusKey) grid.querySelector(`[data-${focusKey}="${CSS.escape(focusSpecies)}"]`)?.focus({ preventScroll: true });
 }
 
 /* ---- Tab badge counters ---- */
@@ -404,7 +491,7 @@ function updateTabCounts() {
   state.species.forEach((s) => { if (counts[s.category] !== undefined) counts[s.category]++; });
   $$("#sp-tabs [data-filter]").forEach((tab) => {
     const c = tab.querySelector(".cnt");
-    if (c) c.textContent = counts[tab.dataset.filter] || 0;
+    if (c) c.textContent = formatNum(counts[tab.dataset.filter] || 0);
   });
 }
 
@@ -431,7 +518,7 @@ function renderStockChips() {
     const meta = SPECIES_META[species_id] || {};
     const chip = document.createElement("span");
     chip.className = "stock-chip";
-    chip.innerHTML = `${meta.emoji || "🐟"} <span class="nm">${spName(species_id)}</span> <span class="ct">×${count}</span> <button class="rm" data-rm="${species_id}" aria-label="remove">×</button>`;
+    chip.innerHTML = `${meta.emoji || "🐟"} <span class="nm">${spName(species_id)}</span> <span class="ct">×${formatNum(count)}</span> <button class="rm" data-rm="${species_id}" aria-label="remove">×</button>`;
     chip.querySelector("[data-rm]").onclick = () => { state.stocking.delete(species_id); renderSpeciesGrid(); renderStockChips(); scheduleAnalyze(); };
     box.appendChild(chip);
   });
@@ -460,7 +547,7 @@ function renderBlueprints() {
       bn: bp.label, en: bp.label, bnTag: bp.tagline, enTag: bp.tagline };
     const el = document.createElement("div");
     el.className = "pkg-card " + meta.tier;
-    const fish = bp.stocking.map((s) => `<span>${s.count}× ${spName(s.species_id)}</span>`).join("");
+    const fish = bp.stocking.map((s) => `<span>${formatNum(s.count)}× ${spName(s.species_id)}</span>`).join("");
     const ratioPct = Math.round(bp.capacity_ratio * 100);
     const safeLabel = bp.harmony_score >= 90 ? (state.lang === "bn" ? "নিরাপদ" : "Safe")
       : bp.harmony_score >= 70 ? (state.lang === "bn" ? "সতর্ক" : "Caution") : (state.lang === "bn" ? "ঝুঁকি" : "Risky");
@@ -474,9 +561,9 @@ function renderBlueprints() {
         <span class="sp-badge ${safeCls}">${safeLabel}</span>
       </div>
       <div class="pkg-metrics">
-        <div class="pkg-metric">${state.lang === "bn" ? "জায়গা" : "Space"}<b>${ratioPct}%</b></div>
-        <div class="pkg-metric">${state.lang === "bn" ? "মাছের মাপ" : "Fish"}<b>${bp.fish_inches}"</b></div>
-        <div class="pkg-metric">${state.lang === "bn" ? "ট্যাংক" : "Tank"}<b>${Math.round(bp.tank.volume_l)} L</b></div>
+        <div class="pkg-metric">${state.lang === "bn" ? "জায়গা" : "Space"}<b>${formatNum(ratioPct)}%</b></div>
+        <div class="pkg-metric">${state.lang === "bn" ? "মাছের মাপ" : "Fish"}<b>${localizeDigits(bp.fish_inches)}"</b></div>
+        <div class="pkg-metric">${state.lang === "bn" ? "ট্যাংক" : "Tank"}<b>${formatNum(bp.tank.volume_l)} L</b></div>
       </div>
       <div class="pkg-fish">${fish}</div>
       <div class="pkg-foot">
@@ -492,8 +579,9 @@ function loadBlueprint(bp) {
   const tk = bp.tank;
   state.stocking.clear();
   bp.stocking.forEach((s) => state.stocking.set(s.species_id, s.count));
-  state._tankOverride = { length_in: tk.length_in, width_in: tk.width_in, height_in: tk.height_in, filter_gph: tk.filter_gph, temperature_c: tk.temperature_c, ph: tk.ph, gh: tk.gh };
-  $("#opt-tank").value = Math.round(tk.volume_l) >= 100 ? 120 : Math.round(tk.volume_l) >= 60 ? 75 : Math.round(tk.volume_l) >= 35 ? 40 : 20;
+  state._tankOverride = { ...tk };
+  state.currentBlueprint = bp;
+  $("#manual-liters").value = Math.round(tk.volume_l);
   renderSpeciesGrid();
   renderStockChips();
   switchPanel("manual");
@@ -573,7 +661,7 @@ function renderMeters(analysis) {
   }
   const ratio = analysis.bioload.capacity_ratio;
   const pct = Math.min(100, Math.round(ratio * 100));
-  spacePct.textContent = pct + "%";
+  spacePct.textContent = formatNum(pct) + "%";
   spaceFill.style.width = pct + "%";
   spaceFill.className = "meter-fill " + (pct > 100 ? "bad" : pct > 85 ? "warn" : "");
   spaceSub.textContent = ratio > 1
@@ -590,7 +678,7 @@ function renderMeters(analysis) {
     const no3 = steps[steps.length - 1].nitrate_mg_l;
     waterScore = Math.max(0, Math.round(100 - (peakA > 0.25 ? (peakA - 0.25) * 120 : 0) - (peakN > 0.25 ? (peakN - 0.25) * 60 : 0) - (no3 > 40 ? (no3 - 40) * 0.5 : 0)));
   }
-  waterPct.textContent = waterScore + "%";
+  waterPct.textContent = formatNum(waterScore) + "%";
   waterFill.style.width = waterScore + "%";
   waterFill.className = "meter-fill " + (waterScore < 60 ? "bad" : waterScore < 85 ? "warn" : "");
   waterSub.textContent = waterScore >= 85
@@ -609,9 +697,9 @@ function renderWaterSummary() {
   const peakA = Math.max(...steps.map((s) => s.ammonia_mg_l));
   const no3 = steps[steps.length - 1].nitrate_mg_l;
   const wc = 25, freq = 7;
-  box.textContent = state.lang === "bn"
+  box.textContent = localizeDigits(state.lang === "bn"
     ? `সপ্তাহে ${freq} দিন পর পর ${wc}% পানি বদলালে এবং ${Math.max(1, Math.round(no3 / 15))}টি গাছ রাখলে পানি সম্পূর্ণ নিরাপদ থাকবে (বিষাক্ত অ্যামোনিয়া সর্বোচ্চ ${peakA.toFixed(2)} mg/L)।`
-    : `Changing ${wc}% water every ${freq} days and keeping ~${Math.max(1, Math.round(no3 / 15))} plants keeps the water completely safe (peak toxic ammonia ${peakA.toFixed(2)} mg/L).`;
+    : `Changing ${wc}% water every ${freq} days and keeping ~${Math.max(1, Math.round(no3 / 15))} plants keeps the water completely safe (peak toxic ammonia ${peakA.toFixed(2)} mg/L).`);
 }
 
 function renderChart() {
@@ -635,7 +723,7 @@ function renderChart() {
   for (let i = 0; i <= 4; i++) {
     const y = pad.t + ih - (ih * i / 4);
     ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke();
-    ctx.fillText((maxV * i / 4).toFixed(1), 6, y + 3);
+    ctx.fillText(localizeDigits((maxV * i / 4).toFixed(1)), 6, y + 3);
   }
   const x = (i) => pad.l + (iw * i / Math.max(1, steps.length - 1));
   const y = (v) => pad.t + ih - (ih * v / maxV);
@@ -651,7 +739,7 @@ function renderChart() {
   plot("nitrite_mg_l", "#D97706");
   plot("nitrate_mg_l", "#2563EB");
   ctx.fillStyle = "#64748B";
-  [0, 7, 14, 21, 29].forEach((d) => ctx.fillText("d" + (d + 1), x(Math.min(d, steps.length - 1)) - 10, H - 8));
+  [0, 7, 14, 21, 29].forEach((d) => ctx.fillText("d" + formatNum(d + 1), x(Math.min(d, steps.length - 1)) - 10, H - 8));
 }
 
 function renderCycleSummary() {
@@ -661,7 +749,7 @@ function renderCycleSummary() {
   const peakA = Math.max(...steps.map((s) => s.ammonia_mg_l));
   const peakN = Math.max(...steps.map((s) => s.nitrite_mg_l));
   const fin = steps[steps.length - 1];
-  const cell = (k, v, cls) => `<div class="csum"><div class="k">${k}</div><div class="v ${cls}">${v}</div></div>`;
+  const cell = (k, v, cls) => `<div class="csum"><div class="k">${k}</div><div class="v ${cls}">${localizeDigits(v)}</div></div>`;
   box.innerHTML = cell(state.lang === "bn" ? "সর্বোচ্চ বিষাক্ত অ্যামোনিয়া" : "Peak toxic ammonia", peakA.toFixed(3) + " mg/L", peakA > 0.25 ? "bad" : "ok")
     + cell(state.lang === "bn" ? "সর্বোচ্চ নাইট্রাইট" : "Peak nitrite", peakN.toFixed(3) + " mg/L", peakN > 0.25 ? "bad" : "ok")
     + cell(state.lang === "bn" ? "শেষ নাইট্রেট" : "Final nitrate", fin.nitrate_mg_l.toFixed(0) + " mg/L", fin.nitrate_mg_l <= 40 ? "ok" : "warn")
@@ -670,28 +758,61 @@ function renderCycleSummary() {
 }
 
 /* ---- Receipt ---- */
+function reportBudget() {
+  const items = state.analysis?.budget ?? state.currentBlueprint?.lines;
+  return Array.isArray(items) ? items.filter((item) => item && typeof item === "object") : [];
+}
+
+function finiteNumber(value, fallback) {
+  return value != null && value !== "" && Number.isFinite(Number(value)) ? Number(value) : fallback;
+}
+
+// Use the calculated tank first; inputs supply defaults for absent result fields.
+function reportTank() {
+  const tank = readTankConfig();
+  const result = state.analysis?.tank ?? state.currentBlueprint?.tank ?? {};
+  for (const key of Object.keys(tank)) {
+    if (typeof tank[key] === "number") tank[key] = finiteNumber(result[key], tank[key]);
+  }
+  const gallons = tank.length_in * tank.width_in * tank.height_in * tank.water_level_pct / 100 / 231;
+  tank.volume_gal = finiteNumber(result.volume_gal, finiteNumber(state.analysis?.bioload?.volume_gal, gallons));
+  tank.volume_l = finiteNumber(result.volume_l, finiteNumber(state.analysis?.bioload?.volume_l, tank.volume_gal * 3.785411784));
+  return tank;
+}
+
+function renderReport() {
+  renderReceipt();
+  renderTankSpecs();
+  renderCare();
+}
+
 function renderReceipt(budget) {
   const ul = $("#budget-list");
   ul.innerHTML = "";
-  const items = budget || [];
+  const source = budget ?? reportBudget();
+  const items = (Array.isArray(source) ? source : []).filter((i) => i && typeof i === "object").map((i) => ({
+    ...i, item: i.item ?? (state.lang === "bn" ? "পণ্যের নাম নেই" : "Unnamed item"),
+    qty: finiteNumber(i.qty, 1), cost_usd: finiteNumber(i.cost_usd, null),
+  }));
   const fish = items.filter((i) => i.category !== "hardware");
   const equip = items.filter((i) => i.category === "hardware");
   const row = (i) => `<li>
     <span class="bi-cat">${i.category === "hardware" ? "" : (i.category === "plants" ? (state.lang === "bn" ? "গাছ" : "Plant") : (state.lang === "bn" ? "মাছ" : "Fish"))}</span>
-    <span class="bi-name">${i.item}</span>
-    <span class="bi-qty">×${i.qty}</span>
-    <span class="bi-cost">${fmtMoney(i.cost_usd * i.qty)}</span>
+    <span class="bi-name">${localizeDigits(i.item)}</span>
+    <span class="bi-qty">×${localizeDigits(i.qty)}</span>
+    <span class="bi-cost">${i.cost_usd === null ? "—" : fmtMoney(i.cost_usd * i.qty)}</span>
   </li>`;
-  if (fish.length) { ul.innerHTML += `<li style="justify-content:flex-start;font-weight:800;background:#F8FAFC;border-radius:8px;padding:9px 12px"><span style="color:#0D9488">${t("receipt.fish")}</span></li>` + fish.map(row).join(""); }
-  if (equip.length) { ul.innerHTML += `<li style="justify-content:flex-start;font-weight:800;background:#F8FAFC;border-radius:8px;padding:9px 12px"><span style="color:#0D9488">${t("receipt.equip")}</span></li>` + equip.map(row).join(""); }
+  if (fish.length) { ul.innerHTML += `<li class="receipt-group">${t("receipt.fish")}</li>` + fish.map(row).join(""); }
+  if (equip.length) { ul.innerHTML += `<li class="receipt-group">${t("receipt.equip")}</li>` + equip.map(row).join(""); }
   if (!items.length) {
-    ul.innerHTML = `<li style="color:#64748B">${state.lang === "bn" ? "মাছ বাছলে এখানে খরচ দেখা যাবে।" : "Pick fish to see the cost here."}</li>`;
+    ul.innerHTML = `<li style="color:#64748B">${state.lang === "bn" ? "খরচ দেখতে মাছ বেছে হিসাব করুন।" : "Select fish and calculate to see costs."}</li>`;
   }
-  const usd = items.reduce((a, b) => a + b.cost_usd * b.qty, 0);
-  const bdt = usd * state.exchangeRate;
+  const complete = items.length > 0 && items.every((i) => i.cost_usd !== null);
+  const usd = complete ? items.reduce((a, b) => a + b.cost_usd * b.qty, 0) : null;
+  const bdt = complete ? usd * state.exchangeRate : null;
   $("#budget-totals").innerHTML = `
-    <div class="bt-item total"><div class="k">${state.lang === "bn" ? "মোট" : "Total"}</div><div class="v">${fmtMoney(usd)}</div></div>
-    <div class="bt-item alt"><div class="k">≈ ${state.currency === "BDT" ? "USD" : "BDT"}</div><div class="v">${state.currency === "BDT" ? "$" + usd.toFixed(2) : fmtMoneyBdt(usd)}</div></div>`;
+    <div class="bt-item total"><div class="k">${state.lang === "bn" ? "মোট" : "Total"}</div><div class="v">${complete ? fmtMoney(usd) : "—"}</div></div>
+    <div class="bt-item alt"><div class="k">≈ ${state.currency === "BDT" ? "USD" : "BDT"}</div><div class="v">${complete ? (state.currency === "BDT" ? "$" + formatNum(usd, 2) : fmtMoneyBdt(usd)) : "—"}</div></div>`;
   return bdt;
 }
 
@@ -699,9 +820,9 @@ function renderReceipt(budget) {
 function renderTankSpecs() {
   const box = $("#tank-specs");
   if (!box) return;
-  const tank = readTankConfig();
-  const liters = Math.round(tank.length_in * tank.width_in * tank.height_in * 2.54 * 2.54 * 2.54 * tank.water_level_pct / 1000);
-  const usdPerDay = 0.30; // estimated electricity
+  const tank = reportTank();
+  const liters = tank.volume_l;
+  const feedG = (tank.food_amount_g * tank.feeding_level * tank.feeding_per_day).toFixed(1);
   const labels = {
     bn: {
       size: "ট্যাংকের সাইজ",
@@ -715,6 +836,7 @@ function renderTankSpecs() {
       fish: "মাছ",
       plants: "গাছ",
       equipment: "সরঞ্জাম",
+      cleaners: "ক্লিনার",
     },
     en: {
       size: "Tank Size",
@@ -728,72 +850,86 @@ function renderTankSpecs() {
       fish: "Fish",
       plants: "Plants",
       equipment: "Equipment",
+      cleaners: "cleaners",
     },
   };
-  const L = labels[state.lang || "en"];
-  const itemCount = stockingList().length;
-  const fishCount = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "fish"; }).length;
-  const plantCount = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "plant"; }).length;
-  const cleanCount = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "invertebrate"; }).length;
+  const L = labels[state.lang] || labels.en;
   // Count hardware items from budget
-  const budgetItems = state.analysis ? state.analysis.budget : [];
+  const budgetItems = reportBudget();
   const hwCount = budgetItems.filter(i => i.category === "hardware").length;
   const fishQty = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "fish"; }).reduce((a, s) => a + s.count, 0);
   const plantQty = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "plant"; }).reduce((a, s) => a + s.count, 0);
   const cleanQty = stockingList().filter(s => { const sp = state.species.find(x => x.id === s.species_id); return sp && sp.category === "invertebrate"; }).reduce((a, s) => a + s.count, 0);
   box.innerHTML = `<table class="specs-table">
-    <tr><td class="k">${L.size}</td><td class="v">${liters} L · ${Math.round(liters * 0.264)} gal</td></tr>
-    <tr><td class="k">${L.filter}</td><td class="v">${Math.round(tank.filter_gph)} GPH</td></tr>
-    <tr><td class="k">${L.temp}</td><td class="v">${tank.temperature_c}°C</td></tr>
-    <tr><td class="k">${L.ph}</td><td class="v">${tank.ph}</td></tr>
-    <tr><td class="k">${L.gh}</td><td class="v">${tank.gh} dGH</td></tr>
-    <tr><td class="k">${L.stocking}</td><td class="v">${fishQty} ${L.fish} · ${plantQty} ${L.plants} · ${cleanQty} ${L.water} ${cleanCount > 0 ? "(" + cleanQty + ")" : ""}</td></tr>
-    <tr><td class="k">${L.water}</td><td class="v">${tank.water_change_pct}% ${state.lang === "bn" ? "প্রতি" : "every"} ${tank.water_change_freq_days} ${state.lang === "bn" ? "দিন" : "days"}</td></tr>
-    <tr><td class="k">${L.feed}</td><td class="v">${tank.feeding_per_day}× ${state.lang === "bn" ? "দিনে" : "/day"} · ${feedG} g</td></tr>
-    <tr><td class="k">${L.equipment}</td><td class="v">${hwCount} ${state.lang === "bn" ? "টি" : "items"}</td></tr>
+    <tr><td class="k">${L.size}</td><td class="v">${formatNum(liters)} L · ${formatNum(tank.volume_gal)} gal</td></tr>
+    <tr><td class="k">${L.filter}</td><td class="v">${formatNum(tank.filter_gph)} GPH</td></tr>
+    <tr><td class="k">${L.temp}</td><td class="v">${localizeDigits(tank.temperature_c)}°C</td></tr>
+    <tr><td class="k">${L.ph}</td><td class="v">${localizeDigits(tank.ph)}</td></tr>
+    <tr><td class="k">${L.gh}</td><td class="v">${localizeDigits(tank.gh)} dGH</td></tr>
+    <tr><td class="k">${L.stocking}</td><td class="v">${formatNum(fishQty)} ${L.fish} · ${formatNum(plantQty)} ${L.plants} · ${formatNum(cleanQty)} ${L.cleaners}</td></tr>
+    <tr><td class="k">${L.water}</td><td class="v">${formatNum(tank.water_change_pct)}% ${state.lang === "bn" ? "প্রতি" : "every"} ${formatNum(tank.water_change_freq_days)} ${state.lang === "bn" ? "দিন" : "days"}</td></tr>
+    <tr><td class="k">${L.feed}</td><td class="v">${formatNum(tank.feeding_per_day)}× ${state.lang === "bn" ? "দিনে" : "/day"} · ${localizeDigits(feedG)} g</td></tr>
+    <tr><td class="k">${L.equipment}</td><td class="v">${formatNum(hwCount)} ${state.lang === "bn" ? "টি" : "items"}</td></tr>
   </table>`;
 }
 
 /* ---- Care rules ---- */
 function renderCare() {
   const box = $("#care-list");
-  const tank = readTankConfig();
+  const tank = reportTank();
   const feedG = (tank.food_amount_g * tank.feeding_level * tank.feeding_per_day).toFixed(1);
   const rules = [
     state.lang === "bn" ? `দিনে ${tank.feeding_per_day} বার, মোট ${feedG} গ্রাম খাবার দিন। মাছ ২ মিনিটে যা খেতে পারে ততটাই যথেষ্ট।` : `Feed ${tank.feeding_per_day}x/day, ${feedG} g total. Only what they eat in 2 minutes.`,
     state.lang === "bn" ? `প্রতি ${tank.water_change_freq_days} দিনে ${tank.water_change_pct}% পানি বদলান। নতুন পানি ফিল্টার করা/ডিক্লোরিনেটেড হতে হবে।` : `Change ${tank.water_change_pct}% water every ${tank.water_change_freq_days} days. Always dechlorinate.`,
     state.lang === "bn" ? `পানির তাপমাত্রা ${tank.temperature_c}°C রাখুন। হঠাৎ বদলাবেন না।` : `Keep the water at ${tank.temperature_c}°C. Avoid sudden changes.`,
   ];
-  box.innerHTML = rules.map((r, i) => `<li><span class="n">${i + 1}</span><span>${r}</span></li>`).join("");
+  box.innerHTML = rules.map((r, i) => `<li><span class="n">${formatNum(i + 1)}</span><span>${localizeDigits(r)}</span></li>`).join("");
 }
 
 /* ---- Tank config reader ---- */
 function readTankConfig() {
   const ov = state._tankOverride || {};
-  return {
-    length_in: ov.length_in || 24, width_in: ov.width_in || 12, height_in: ov.height_in || 16,
+  const inputLiters = finiteNumber($(state.panel === "manual" ? "#manual-liters" : "#tank-size")?.value, 40);
+  const liters = inputLiters > 0 ? inputLiters : 40;
+  const tank = {
+    length_in: 24, width_in: 12,
+    height_in: liters * 1000 / (24 * 12 * 2.54 ** 3 * 0.9),
     water_level_pct: 90,
-    filter_gph: ov.filter_gph || 100, filter_type: "HOB", substrate: "sand", planted: true,
-    temperature_c: ov.temperature_c || 25, ph: ov.ph || 7.0, gh: ov.gh || 8,
+    filter_gph: 100, filter_type: "HOB", substrate: "sand", planted: true,
+    temperature_c: 25, ph: 7.0, gh: 8,
     stocking: stockingList(),
     water_change_pct: 25, water_change_freq_days: 7, feeding_per_day: 2, food_amount_g: 1.5,
-    room_climate: "climate_controlled", currency: state.currency, feeding_level: 1.0,
+    room_climate: $("#climate-preset").value, currency: state.currency, feeding_level: 1.0,
   };
+  for (const key of Object.keys(tank)) {
+    if (typeof tank[key] === "number") tank[key] = finiteNumber(ov[key], tank[key]);
+    else if (key !== "stocking" && key !== "currency" && key !== "room_climate") tank[key] = ov[key] ?? tank[key];
+  }
+  return tank;
 }
 
 /* ============================================================
    ANALYSIS + RESULTS
    ============================================================ */
 let _analyzeTimer = null;
+let _analysisVersion = 0;
 function scheduleAnalyze() {
   clearTimeout(_analyzeTimer);
+  _analysisVersion++;
+  state.analysis = null;
+  state.currentBlueprint = null;
+  renderReport();
   _analyzeTimer = setTimeout(analyze, 500);
 }
 
 async function analyze() {
+  const version = ++_analysisVersion;
+  state.analysis = null;
+  renderReport();
   const list = stockingList();
   if (!list.length) {
     state.analysis = null;
+    state.currentBlueprint = null;
     state.cycleSteps = null;
     $("#status-banner").innerHTML = `<div class="status" style="background:var(--slate);border-color:var(--border)">
       <div class="status-icon">🐟</div>
@@ -804,6 +940,8 @@ async function analyze() {
     $("#btn-autofix").disabled = true;
     renderMeters(null);
     renderWaterSummary();
+    renderCycleSummary();
+    renderChart();
     renderReceipt([]);
     renderTankSpecs();
     renderCare();
@@ -815,6 +953,7 @@ async function analyze() {
       api("/analyze-tank", cfg),
       api("/simulate-30-days", cfg),
     ]);
+    if (version !== _analysisVersion) return;
     state.analysis = res;
     state.cycleSteps = sim.steps;
     state.exchangeRate = res.exchange_rate || state.exchangeRate;
@@ -829,6 +968,7 @@ async function analyze() {
     renderCare();
     $("#btn-autofix").disabled = res.compatibility.score >= 90;
   } catch (e) {
+    if (version !== _analysisVersion) return;
     toast(state.lang === "bn" ? "হিসাব করা গেল না: " + e.message : "Could not calculate: " + e.message);
   }
 }
@@ -841,11 +981,12 @@ async function autoFix() {
   try {
     const cfg = readTankConfig();
     const res = await api("/auto-fix-tank", cfg);
+    state._tankOverride = { ...res.tank };
+    state.currentBlueprint = null;
     state.stocking.clear();
     res.tank.stocking.forEach((s) => state.stocking.set(s.species_id, s.count));
     renderSpeciesGrid();
     renderStockChips();
-    state._tankOverride = null;
     toast(state.lang === "bn" ? "সমস্যার সমাধান হয়েছে! 🎉" : "Problems auto-fixed! 🎉");
     await analyze();
     $("#step2").scrollIntoView({ behavior: "smooth" });
@@ -859,15 +1000,15 @@ async function autoFix() {
    AUTO-BUILD BLUEPRINTS
    ============================================================ */
 async function generateBlueprints() {
-  const btn = $("#btn-generate");
+  if (!$("#wizard-form").reportValidity()) return;
+  const btn = $("#btn-optimize");
   btn.disabled = true;
-  const orig = btn.textContent;
   btn.textContent = state.lang === "bn" ? "খুঁজছি…" : "Finding…";
   try {
-    const budget = parseFloat($("#opt-budget").value) || 20000;
-    const liters = parseFloat($("#opt-tank").value) || 75;
-    const goal = $("#opt-goal").value;
-    const req = { max_budget_bdt: budget, tank_liters: liters, style_goal: goal, currency: state.currency };
+    const liters = Number($("#tank-size").value);
+    const goal = $("#style-goal").value;
+    const req = { max_budget_bdt: state.budgetBdt, tank_liters: liters, style_goal: goal,
+      climate_preset: $("#climate-preset").value, currency: state.currency };
     const res = await api("/optimize-setup", req);
     state.blueprints = res.blueprints || [];
     renderBlueprints();
@@ -880,7 +1021,7 @@ async function generateBlueprints() {
     toast(state.lang === "bn" ? "খুঁজে পাওয়া গেল না: " + e.message : "Could not find: " + e.message);
   } finally {
     btn.disabled = false;
-    btn.textContent = orig;
+    btn.textContent = t("btn.analyze");
   }
 }
 
@@ -888,8 +1029,8 @@ async function generateBlueprints() {
    COMMERCIAL MODE RENDERING
    ============================================================ */
 function fmtBdt(bdt) {
-  if (state.currency === "BDT") return "৳" + Math.round(bdt).toLocaleString("en-IN");
-  return "$" + (bdt / state.exchangeRate).toFixed(2);
+  if (state.currency === "BDT") return bdtPrefix() + formatNum(Math.round(bdt));
+  return "$" + formatNum(bdt / state.exchangeRate, 2);
 }
 
 async function loadCommercialSpecies() {
@@ -908,7 +1049,6 @@ async function loadCommercialSpecies() {
 async function commercialSimulate() {
   const btn = $("#btn-commsim");
   btn.disabled = true;
-  const orig = btn.textContent;
   btn.textContent = state.lang === "bn" ? "হিসাব করছি..." : "Calculating...";
   try {
     const req = {
@@ -934,7 +1074,7 @@ async function commercialSimulate() {
     toast(state.lang === "bn" ? "হিসাব করা গেল না: " + e.message : "Could not calculate: " + e.message);
   } finally {
     btn.disabled = false;
-    btn.textContent = orig;
+    btn.textContent = t("btn.simulate");
   }
 }
 
@@ -942,13 +1082,13 @@ function renderCommercialReport(res) {
   const sum = res.summary;
   $("#ex-net").textContent = fmtBdt(sum.net_profit_bdt);
   $("#ex-net-sub").textContent = state.lang === "bn" ? "মোট লাভ" : "Net profit";
-  $("#ex-roi").textContent = sum.roi_pct.toFixed(1) + "%";
-  $("#ex-feed").textContent = (sum.max_daily_feed_kg || 0).toFixed(2) + " kg";
-  $("#ex-fcr").textContent = "FCR: " + (sum.fcr || 0).toFixed(2);
-  $("#ex-mol").textContent = (sum.max_daily_molasses_g || 0).toFixed(0) + " g";
-  $("#ex-nh3").textContent = (sum.nh3_mg_l || 0).toFixed(3) + " mg/L";
-  $("#ex-tan").textContent = "TAN: " + (sum.tan_mg_l || 0).toFixed(3) + " mg/L";
-  $("#ex-aer").textContent = (sum.aeration_lpm || 0).toFixed(1) + " L/min";
+  $("#ex-roi").textContent = formatNum(sum.roi_pct, 1) + "%";
+  $("#ex-feed").textContent = formatNum(sum.max_daily_feed_kg || 0, 2) + " kg";
+  $("#ex-fcr").textContent = "FCR: " + formatNum(sum.fcr || 0, 2);
+  $("#ex-mol").textContent = formatNum(sum.max_daily_molasses_g || 0) + " g";
+  $("#ex-nh3").textContent = formatNum(sum.nh3_mg_l || 0, 3) + " mg/L";
+  $("#ex-tan").textContent = "TAN: " + formatNum(sum.tan_mg_l || 0, 3) + " mg/L";
+  $("#ex-aer").textContent = (state.lang === "bn" ? "বায়ু: " : "Air: ") + formatNum(sum.aeration_lpm || 0, 1) + " L/min";
 
   // Chart
   const canvas = $("#comm-chart");
@@ -972,7 +1112,7 @@ function renderCommercialReport(res) {
   for (let i = 0; i <= 4; i++) {
     const y = pad.t + ih - (ih * i / 4);
     ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(W - pad.r, y); ctx.stroke();
-    ctx.fillText((maxW * i / 4).toFixed(1), 6, y + 3);
+    ctx.fillText(localizeDigits((maxW * i / 4).toFixed(1)), 6, y + 3);
   }
   const x = (i) => pad.l + (iw * i / Math.max(1, rows.length - 1));
   const yW = (v) => pad.t + ih - (ih * v / maxW);
@@ -985,7 +1125,7 @@ function renderCommercialReport(res) {
   rows.forEach((r, i) => { const yy = yF(r.feed_kg_day); i ? ctx.lineTo(x(i), yy) : ctx.moveTo(x(i), yy); });
   ctx.stroke();
   ctx.fillStyle = "#64748B";
-  [0, 4, 8, 12, 16, 20, 24, 28].forEach((d) => ctx.fillText("W" + (Math.floor(d / 7) + 1), x(Math.min(d, rows.length - 1)) - 10, H - 8));
+  [0, 4, 8, 12, 16, 20, 24, 28].forEach((d) => ctx.fillText("W" + formatNum(Math.floor(d / 7) + 1), x(Math.min(d, rows.length - 1)) - 10, H - 8));
 
   // Table
   const tw = $("#comm-table-wrap");
@@ -999,7 +1139,7 @@ function renderCommercialReport(res) {
   ];
   let html = `<table class="batch"><thead><tr>${headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>`;
   rows.forEach((r) => {
-    html += `<tr><td class="num">${r.week}</td><td class="num">${r.day}</td><td class="num">${r.weight_g.toFixed(0)}</td><td class="num">${r.biomass_kg.toFixed(2)}</td><td class="num">${r.feed_kg_day.toFixed(3)}</td><td class="num">${r.nh3_mg_l.toFixed(3)}</td></tr>`;
+    html += `<tr><td class="num">${formatNum(r.week)}</td><td class="num">${formatNum(r.day)}</td><td class="num">${formatNum(r.weight_g)}</td><td class="num">${formatNum(r.biomass_kg, 2)}</td><td class="num">${formatNum(r.feed_kg_day, 3)}</td><td class="num">${formatNum(r.nh3_mg_l, 3)}</td></tr>`;
   });
   html += `</tbody></table>`;
   tw.innerHTML = html;
@@ -1008,17 +1148,23 @@ function renderCommercialReport(res) {
   const summaryBox = $("#comm-summary");
   summaryBox.innerHTML = `
     <div class="bt-item total"><div class="k">${state.lang === "bn" ? "মোট লাভ" : "Net Profit"}</div><div class="v">${fmtBdt(sum.net_profit_bdt)}</div></div>
-    <div class="bt-item alt"><div class="k">ROI</div><div class="v">${sum.roi_pct.toFixed(1)}%</div></div>`;
+    <div class="bt-item alt"><div class="k">ROI</div><div class="v">${formatNum(sum.roi_pct, 1)}%</div></div>`;
 }
 
 /* ============================================================
    INIT + EVENT HANDLERS
    ============================================================ */
 function switchPanel(mode) {
+  state.panel = mode;
   $("#panel-auto").hidden = mode !== "auto";
   $("#panel-manual").hidden = mode !== "manual";
   $("#opt-auto").classList.toggle("selected", mode === "auto");
   $("#opt-manual").classList.toggle("selected", mode === "manual");
+  $$(".hero-tabs [data-tab]").forEach((tab) => {
+    const active = tab.dataset.tab === (mode === "auto" ? "wizard" : "manual");
+    tab.classList.toggle("active", active);
+    tab.setAttribute("aria-pressed", String(active));
+  });
 }
 
 function bindEvents() {
@@ -1035,10 +1181,14 @@ function bindEvents() {
   $("#cur-usd").onclick = () => { state.currency = "USD"; savePrefs(); $("#cur-usd").classList.add("active"); $("#cur-bdt").classList.remove("active"); reRenderCurrency(); };
 
   // Budget quick-pills
+  $("#budget-input").oninput = () => {
+    state.budgetBdt = Number($("#budget-input").value) * (state.currency === "USD" ? state.exchangeRate : 1);
+    renderBudgetControls();
+  };
   $$(".budget-pill").forEach((pill) => {
     pill.onclick = () => {
-      $$(".budget-pill").forEach((p) => p.classList.toggle("active", p === pill));
-      $("#opt-budget").value = pill.dataset.budget;
+      state.budgetBdt = Number(pill.dataset.budget);
+      renderBudgetControls(true);
     };
   });
 
@@ -1071,12 +1221,24 @@ function bindEvents() {
     $("#view-farm").hidden = false;
     $("#nav-farm").classList.add("active");
     $("#nav-home").classList.remove("active");
-    await loadCommercialSpecies();
+    if (!$("#comm-species").options.length) await loadCommercialSpecies();
+    if (state.commercial) renderCommercialReport(state.commercial);
   };
 
   // Option cards
   $("#opt-auto").onclick = () => switchPanel("auto");
   $("#opt-manual").onclick = () => switchPanel("manual");
+  $$(".hero-tabs [data-tab]").forEach((tab) => {
+    tab.onclick = () => tab.dataset.tab === "commercial" ? $("#nav-farm").click()
+      : switchPanel(tab.dataset.tab === "wizard" ? "auto" : "manual");
+  });
+  $("#manual-liters").oninput = () => {
+    if (!$("#manual-liters").checkValidity()) return;
+    state._tankOverride = null;
+    scheduleAnalyze();
+  };
+  $("#tank-size").onchange = () => { state._tankOverride = null; scheduleAnalyze(); };
+  $("#climate-preset").onchange = scheduleAnalyze;
 
   // Species tabs
   $$("[data-filter]").forEach((tab) => {
@@ -1094,20 +1256,24 @@ function bindEvents() {
   };
 
   // Generate button
-  $("#btn-generate").onclick = generateBlueprints;
+  $("#wizard-form").onsubmit = (event) => { event.preventDefault(); generateBlueprints(); };
+  $("#panel-manual form").onsubmit = (event) => event.preventDefault();
+  $("#comm-form").onsubmit = (event) => { event.preventDefault(); commercialSimulate(); };
 
   // Auto-fix
   $("#btn-autofix").onclick = autoFix;
 
   // Print buttons
+  window.addEventListener("beforeprint", renderReport);
   $("#btn-print").onclick = () => window.print();
   $("#btn-comm-print").onclick = () => window.print();
 
   // Download list
   $("#btn-download").onclick = () => {
+    renderReport();
     const list = $("#budget-list").innerText;
     const total = $("#budget-totals").innerText;
-    const blob = new Blob([list + "\n\n" + total], { type: "text/plain" });
+    const blob = new Blob([list + "\n\n" + total + "\n\n" + $("#tank-specs").innerText + "\n\n" + $("#care-list").innerText], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
@@ -1119,10 +1285,6 @@ function bindEvents() {
   // Commercial simulate
   $("#btn-commsim").onclick = commercialSimulate;
 
-  // Initial empty-state render (neutral banner, chips placeholder, care rules)
-  renderStockChips();
-  analyze();
-
   // Initial render (restore saved preferences)
   loadPrefs();
   applyTheme(state.theme);
@@ -1131,18 +1293,25 @@ function bindEvents() {
   $("#cur-bdt").classList.toggle("active", state.currency === "BDT");
   $("#cur-usd").classList.toggle("active", state.currency === "USD");
   applyI18n();
+  renderBudgetControls(true);
+  switchPanel("auto");
+  renderStockChips();
+  analyze();
   loadSpecies();
   loadCommercialSpecies();
 }
 
 function reRenderCurrency() {
+  renderBudgetControls(true);
   renderSpeciesGrid();
   renderBlueprints();
-  if (state.analysis) renderReceipt(state.analysis.budget);
+  renderReceipt();
   if (state.commercial) renderCommercialReport(state.commercial);
 }
 
 function reRenderLang() {
+  renderReport();
+  renderBudgetControls();
   renderSpeciesGrid();
   renderStockChips();
   renderBlueprints();
@@ -1154,6 +1323,10 @@ function reRenderLang() {
     renderCycleSummary();
     renderReceipt(state.analysis.budget);
     renderCare();
+    renderTankSpecs();
+    renderChart();
+  } else if (!stockingList().length) {
+    analyze();
   }
   if (state.commercial) renderCommercialReport(state.commercial);
 }

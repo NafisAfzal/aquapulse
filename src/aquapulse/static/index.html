@@ -13,14 +13,7 @@
 </head>
 <body data-lang="bn" data-harmony="ok">
 
-  <div class="orbs" aria-hidden="true">
-    <div class="orb orb-a"></div>
-    <div class="orb orb-b"></div>
-    <div class="orb orb-c"></div>
-  </div>
-
   <header class="topbar no-print">
-    <div class="wrap">
       <div class="brand">
         <div class="brand-mark">🐟</div>
         <div class="brand-text">
@@ -28,6 +21,10 @@
           <p data-i18n="brand.tag">Simple Aquarium Advice</p>
         </div>
       </div>
+        <div class="seg view-nav" role="group" aria-label="Navigation">
+          <button id="nav-home" class="active" data-i18n="nav.home">🏠 Home Aquarium</button>
+          <button id="nav-farm" data-i18n="nav.farm">🚜 Commercial Fish Farming</button>
+        </div>
       <div class="topbar-right">
         <div class="theme-switch" role="group" aria-label="Theme">
           <button id="theme-light" class="active" title="Light" aria-label="Light mode">☀️</button>
@@ -38,149 +35,418 @@
           <button id="lang-en">English</button>
         </div>
         <div class="seg" role="group" aria-label="Currency">
-          <button id="cur-bdt" class="active">৳ BDT</button>
+          <button id="cur-bdt" class="active" data-i18n="currency.bdt">৳ BDT</button>
           <button id="cur-usd">$ USD</button>
         </div>
       </div>
-    </div>
   </header>
 
   <main class="wrap">
-    <!-- ===== Hero ===== -->
-    <section class="card hero" id="hero">
-      <h2 data-i18n="hero.title">Plan a Beautiful, Compatible Aquarium</h2>
-      <p class="hero-sub" data-i18n="hero.sub">Know which fish can live together and exactly what it costs - a package for your budget, at Dhaka market prices.</p>
 
-      <div class="tabs no-print" role="group" aria-label="Mode">
-        <button type="button" class="tab active" data-tab="wizard" data-i18n="mode.wizard">Auto-Architect</button>
-        <button type="button" class="tab" data-tab="manual" data-i18n="mode.manual">Manual Planner</button>
-        <button type="button" class="tab" data-tab="commercial" data-i18n="mode.commercial">Commercial</button>
-      </div>
+    <!-- ===== HOME VIEW ===== -->
+    <div id="view-home">
 
-      <!-- Auto-Architect Wizard -->
-      <div id="tab-wizard" class="tab-content active">
-        <form class="wizard-grid">
-          <div class="field-group">
-            <label for="opt-budget" data-i18n="auto.budget">Your budget (BDT)</label>
-            <div class="budget-pills">
-              <button type="button" class="budget-pill" data-budget="3000">৳3,000</button>
-              <button type="button" class="budget-pill active" data-budget="8000">৳8,000</button>
-              <button type="button" class="budget-pill" data-budget="15000">৳15,000</button>
+      <!-- ===== Hero Shell ===== -->
+      <section class="section-shell shell-hero" id="hero">
+        <div class="hero hero-text">
+          <h1><span class="grad" data-i18n="hero.title">Plan a Beautiful, Compatible Aquarium</span></h1>
+          <p class="hero-sub" data-i18n="hero.sub">Know which fish can live together and exactly what it costs - a package for your budget, at Dhaka market prices.</p>
+        </div>
+
+        <!-- Mode tabs -->
+        <div class="hero-tabs" role="group" aria-label="Mode">
+          <button type="button" class="tab active" data-tab="wizard" data-i18n="mode.wizard">Auto-Architect</button>
+          <button type="button" class="tab" data-tab="manual" data-i18n="mode.manual">Manual Planner</button>
+          <button type="button" class="tab" data-tab="commercial" data-i18n="mode.commercial">Commercial</button>
+        </div>
+
+        <!-- Auto-Architect Wizard Panel -->
+        <div id="panel-auto" class="tab-content">
+          <form class="wizard-form-grid" id="wizard-form">
+
+            <!-- Budget -->
+            <div class="field-group">
+              <div class="budget-label-row">
+                <label for="budget-input" data-i18n="auto.budget">Your budget (BDT)</label>
+                <div class="budget-pills" role="group" aria-label="Budget presets">
+                <button type="button" class="budget-pill" data-budget="3000">৳3,000</button>
+                <button type="button" class="budget-pill active" data-budget="8000">৳8,000</button>
+                <button type="button" class="budget-pill" data-budget="15000">৳15,000</button>
+                </div>
+              </div>
+              <input id="budget-input" type="number" min="500" max="200000" step="1" value="8000" required />
             </div>
-            <input id="opt-budget" type="number" min="500" max="200000" step="500" value="8000" />
-          </div>
-          <div class="field-group">
-            <label for="opt-liters" data-i18n="auto.tanksize">Tank size (liters)</label>
-            <select id="opt-liters">
-              <option value="20">২০ লিটার (Nano)</option>
-              <option value="40">৪০ লিটার (Community)</option>
-              <option value="75" selected>৭৫ লিটার (Standard)</option>
-              <option value="150">১৫০ লিটার (Large)</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <label for="opt-goal" data-i18n="auto.goal">Goal</label>
-            <select id="opt-goal">
-              <option value="peaceful_community">Peaceful Community</option>
-              <option value="low_maintenance_planted">Low-Maintenance Planted</option>
-              <option value="vibrant_centerpiece">Vibrant Centerpiece</option>
-              <option value="shrimp_breeding_colony">Shrimp Breeding Colony</option>
-            </select>
-          </div>
-          <div class="field-group">
-            <label for="opt-climate" data-i18n="auto.climate">Climate</label>
-            <select id="opt-climate">
-              <option value="tropical_hot">Tropical Hot</option>
-              <option value="tropical_moderate">Tropical Moderate</option>
-              <option value="climate_controlled" selected>Climate Controlled</option>
-              <option value="cool_seasonal">Cool Seasonal</option>
-              <option value="cold_seasonal">Cold Seasonal</option>
-              <option value="cold">Cold Room</option>
-            </select>
-          </div>
-          <button type="button" class="btn primary wide" id="btn-analyze-tank" data-i18n="btn.analyze">Analyze Tank</button>
-        </form>
 
-        <div class="card mt" id="tank-result">
-          <pre class="result prettyprint" id="tank-result-content"></pre>
+            <!-- Tank size -->
+            <div class="field-group">
+              <label for="tank-size" data-i18n="auto.tanksize">Tank size (liters)</label>
+              <select id="tank-size">
+                <option value="20" data-i18n="auto.size.small">20 L (Nano)</option>
+                <option value="40" data-i18n="auto.size.med">40 L (Community)</option>
+                <option value="75" selected data-i18n="auto.size.large">75 L (Standard)</option>
+                <option value="150" data-i18n="auto.size.xl">150 L (Large)</option>
+              </select>
+            </div>
+
+            <!-- Goal -->
+            <div class="field-group">
+              <label for="style-goal" data-i18n="auto.goal">What kind of tank do you want?</label>
+              <select id="style-goal">
+                <option value="peaceful_community" data-i18n="auto.goal1">Peaceful Community</option>
+                <option value="low_maintenance_planted" data-i18n="auto.goal2">Low-Maintenance Planted</option>
+                <option value="vibrant_centerpiece" data-i18n="auto.goal3">Vibrant Centerpiece</option>
+                <option value="shrimp_breeding_colony" data-i18n="auto.goal4">Shrimp Breeding Colony</option>
+              </select>
+            </div>
+
+            <!-- Climate -->
+            <div class="field-group">
+              <label for="climate-preset" data-i18n="auto.climate">Climate</label>
+              <select id="climate-preset">
+                <option value="tropical_summer" data-i18n="climate.summer">Tropical Summer (30–33°C)</option>
+                <option value="winter_indoor" data-i18n="climate.winter">Winter Indoor (18–20°C)</option>
+                <option value="climate_controlled" selected data-i18n="climate.controlled">Climate Controlled (24–25°C)</option>
+              </select>
+            </div>
+          </form>
+
+          <!-- Generate Setup CTA -->
+          <button type="submit" form="wizard-form" class="btn-generate" id="btn-optimize" data-i18n="btn.analyze">
+            <span>⚡</span><span>Generate Setup</span>
+          </button>
+
+          <!-- Blueprint Cards -->
+          <div class="card" id="tank-result" style="display:none">
+            <pre class="result prettyprint" id="tank-result-content"></pre>
+          </div>
         </div>
-      </div>
 
-      <!-- Manual Planner -->
-      <div id="tab-manual" class="tab-content">
-        <form class="wizard-grid">
-          <div class="field-group">
-            <label for="manual-liters">Tank size (liters)</label>
-            <input id="manual-liters" type="number" min="5" max="500" step="5" value="40" />
-          </div>
-          <div class="field-group">
-            <label for="manual-budget">Budget (BDT)</label>
-            <input id="manual-budget" type="number" min="100" max="200000" step="500" value="8000" />
-          </div>
-        </form>
-        <p class="card-sub no-print">Manual planner coming soon. Use Auto-Architect for now.</p>
-      </div>
+        <!-- Manual Planner Panel -->
+        <div id="panel-manual" hidden class="tab-content">
+          <form class="wizard-form-grid">
+            <div class="field-group">
+              <label for="manual-liters" data-i18n="auto.tanksize">Tank size (liters)</label>
+              <input id="manual-liters" type="number" min="5" max="500" step="5" value="40" />
+            </div>
+            <div class="field-group">
+              <label for="manual-budget" data-i18n="auto.budget">Budget (BDT)</label>
+              <input id="manual-budget" type="number" min="100" max="200000" step="500" value="8000" />
+            </div>
+          </form>
+          <p class="card-sub no-print" data-i18n="pick.sub">Press + on a species card to add it to your tank.</p>
+        </div>
 
-      <!-- Commercial -->
-      <div id="tab-commercial" class="tab-content">
-        <form class="wizard-grid" id="comm-form">
-          <div class="field-group">
-            <label for="comm-liters">System size (liters)</label>
-            <input id="comm-liters" type="number" min="100" max="5000" step="100" value="1000" />
-          </div>
-          <div class="field-group">
-            <label for="comm-stock">Stocking (fingerlings)</label>
-            <input id="comm-stock" type="number" min="100" max="50000" step="50" value="1000" />
-          </div>
-          <div class="field-group">
-            <label for="comm-type">System type</label>
-            <select id="comm-type">
-              <option value="Biofloc Tank">Biofloc Tank</option>
-              <option value="RAS">RAS</option>
-              <option value="Extensive Pond">Extensive Pond</option>
-            </select>
-          </div>
-          <button type="button" class="btn secondary wide" id="btn-commercial-sim" data-i18n="btn.simulate">Simulate</button>
-        </form>
+        <!-- Option cards -->
+        <div style="display:none">
+          <button id="opt-auto" data-i18n="opt.a.title">Smart Budget Architect</button>
+          <button id="opt-manual" data-i18n="opt.b.title">Custom Workbench</button>
+        </div>
+      </section>
 
-        <div class="card mt" id="comm-result">
-          <canvas id="comm-chart" height="230"></canvas>
+      <!-- ===== Shell-Emerald: Auto-Architect & Blueprints ===== -->
+      <section class="section-shell shell-emerald" id="step3">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-ic">✨</div>
+            <div>
+              <div class="card-title" data-i18n="results.title">Your Build Options</div>
+              <div class="card-sub" data-i18n="results.sub">Three ranked blueprints - pick your favourite.</div>
+            </div>
+          </div>
+        </div>
+        <div class="pkg-list" id="pkg-list"></div>
+      </section>
+
+      <!-- ===== Shell-Ocean: Species Picker & Custom Workbench ===== -->
+      <section class="section-shell shell-ocean" id="step1">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-ic">🐠</div>
+            <div>
+              <div class="card-title" data-i18n="catalog.title">Species Catalog</div>
+              <div class="card-sub" data-i18n="catalog.sub">Browse compatible fish, shrimp, snails and plants.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter tabs + search on one horizontal row -->
+        <div class="species-controls">
+          <div class="sp-tabs" id="sp-tabs" role="group" aria-label="Filter">
+            <button type="button" class="tab active" data-filter="all" data-i18n="pick.all">All</button>
+            <button type="button" class="tab" data-filter="fish" data-i18n="pick.fish">Colorful Fish</button>
+            <button type="button" class="tab" data-filter="invertebrate" data-i18n="pick.clean">Shrimp & Snails</button>
+            <button type="button" class="tab" data-filter="plant" data-i18n="pick.plant">Live Plants</button>
+          </div>
+          <input type="search" id="sp-search" class="search" placeholder="Search by name..." data-i18n-ph="pick.search" />
+        </div>
+
+        <!-- Species grid - 260px minmax, equal-height cards -->
+        <div class="sp-grid" id="sp-grid"></div>
+
+        <!-- Stock chips -->
+        <div class="stock-list" id="stock-list"></div>
+      </section>
+
+      <!-- ===== Shell-Violet: Tank Health, Harmony & 30-Day Telemetry ===== -->
+      <section class="section-shell shell-violet" id="step2">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-ic">⚡</div>
+            <div>
+              <div class="card-title" data-i18n="s2.title">Your Tank Checkup</div>
+              <div class="card-sub" data-i18n="s2.desc">See if your fish can live together, and whether the tank has enough space.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Harmony Status Banner -->
+        <div id="status-banner">
+          <div class="status ok">
+            <div class="status-icon">🐟</div>
+            <div>
+              <div class="status-title">Nothing picked yet</div>
+              <div class="status-body">Add fish or plants in Step 1 — the checkup will appear here.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-column split: Issues + Auto-Fix / Meters -->
+        <div class="checkup-grid">
+
+          <!-- Left column: Plain-language issues + Auto-Fix -->
+          <div>
+            <div id="issues-box" style="color:#64A3B8;font-size:15px;padding:8px 0">
+              Pick fish to see the tank checkup here.
+            </div>
+            <button type="button" class="btn btn-autofix" id="btn-autofix" data-i18n="autofix.btn">
+              🔧 One-Click Auto-Fix My Tank
+            </button>
+          </div>
+
+          <!-- Right column: Progress meters -->
+          <div>
+            <!-- Tank Space Meter -->
+            <div class="meter">
+              <div class="meter-label">
+                <span data-i18n="meters.space">Tank Space & Health</span> <span class="pct" id="space-pct">—</span>
+              </div>
+              <div class="meter-bar">
+                <div class="meter-fill" id="space-fill" style="width:0%"></div>
+              </div>
+              <div class="meter-sub" id="space-sub"></div>
+            </div>
+
+            <!-- Water Safety Meter -->
+            <div class="meter">
+              <div class="meter-label">
+                <span data-i18n="meters.water">Water Safety</span> <span class="pct" id="water-pct">—</span>
+              </div>
+              <div class="meter-bar">
+                <div class="meter-fill" id="water-fill" style="width:0%"></div>
+              </div>
+              <div class="meter-sub" id="water-sub"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Water forecast summary -->
+        <div class="card" style="margin-top:20px">
+          <div class="card-title" data-i18n="water.title">Water Cleanliness Forecast</div>
+          <div class="card-sub" data-i18n="water.more">See the detailed 30-day forecast</div>
+          <canvas id="chart" height="230" style="width:100%;height:230px"></canvas>
           <div class="chart-legend">
-            <span><span class="chart-key" style="background:#0D9488"></span>Total Fish Weight (kg)</span>
-            <span><span class="chart-key" style="background:#D97706"></span>Daily Feed (kg)</span>
-          </div>
-          <div class="table-wrap" id="comm-table-wrap"></div>
-          <div class="budget-totals" id="comm-summary"></div>
-          <div style="margin-top:18px" class="no-print">
-            <button class="btn secondary small" id="btn-comm-print">Print</button>
+            <span><span class="chart-key" style="background:#DC2626"></span><span data-i18n="chart.nh3">Toxic Ammonia</span></span>
+            <span><span class="chart-key" style="background:#D97706"></span><span data-i18n="chart.no2">Nitrite</span></span>
+            <span><span class="chart-key" style="background:#2563EB"></span><span data-i18n="chart.no3">Nitrate (plant food)</span></span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ===== Results ===== -->
-    <section class="card mt" id="results" style="display:none">
-      <h2 data-i18n="results.title">Your Build Options</h2>
-      <p class="card-sub" data-i18n="results.sub">Three ranked blueprints - pick your favourite.</p>
-      <div class="blueprint-list" id="blueprint-list"></div>
-    </section>
+        <!-- Water summary text -->
+        <div id="water-summary" style="margin-top:14px;font-size:15px;color:var(--text-muted)"></div>
 
-    <!-- ===== Saved Builds ===== -->
-    <section class="card mt" id="saved-builds">
-      <h2 data-i18n="saved.title">Saved Builds</h2>
-      <div id="saved-builds-list" class="saved-builds-list"></div>
-    </section>
+        <!-- 30-Day cycle summary -->
+        <div class="cycle-summary" id="cycle-summary"></div>
+      </section>
 
-    <!-- ===== Species Catalog ===== -->
-    <section class="card mt" id="species-catalog">
-      <h2 data-i18n="catalog.title">Species Catalog</h2>
-      <p class="card-sub" data-i18n="catalog.sub">Browse compatible fish, shrimp, snails and plants.</p>
-      <div class="species-grid" id="species-grid"></div>
-    </section>
+      <!-- ===== Shell-Amber: Shopping Receipt, Specs & Care Sheet ===== -->
+      <section class="section-shell shell-amber" id="care-sheet">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-ic">🧾</div>
+            <div>
+              <div class="card-title" data-i18n="s3.title">Shopping List & Care Guide</div>
+              <div class="card-sub" data-i18n="s3.desc">Take this list to the shop, or print it out.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-column grid: Receipt + Tank Specs -->
+        <div class="receipt-grid">
+
+          <!-- Shopping Receipt -->
+          <div class="card">
+            <div class="receipt-title" data-i18n="receipt.title">🧾 Shopping List</div>
+            <p class="card-sub" data-i18n="receipt.sub">Fish, plants and equipment — all priced together.</p>
+            <ul class="budget-list" id="budget-list"></ul>
+            <div class="budget-totals" id="budget-totals"></div>
+          </div>
+
+          <!-- Tank Specs -->
+          <div class="card">
+            <div class="receipt-title" data-i18n="tank.specs.title">🧪 Tank Specifications</div>
+            <div id="tank-specs"></div>
+          </div>
+        </div>
+
+        <!-- 3 Golden Care Rules - 3-column horizontal row -->
+        <ol class="care-list" id="care-list"></ol>
+
+        <!-- Action buttons -->
+        <div style="display: flex; gap: 12px; justify-content: flex-start; margin-top: 20px; flex-wrap: wrap;">
+          <button class="btn secondary" id="btn-download" data-i18n="btn.download">⬇ Download List</button>
+          <button class="btn" id="btn-print" data-i18n="btn.print">🖨 Print Care Sheet</button>
+        </div>
+      </section>
+
+      <!-- ===== Saved Builds ===== -->
+      <section class="card" id="saved-builds">
+        <h2 data-i18n="saved.title">Saved Builds</h2>
+        <div id="saved-builds-list" class="saved-builds-list"></div>
+      </section>
+    </div>
+
+    <!-- ===== VIEW-FARM: Commercial Biofloc Mode ===== -->
+    <div id="view-farm" hidden>
+      <section class="section-shell shell-indigo">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-ic">🚜</div>
+            <div>
+              <div class="card-title" data-i18n="farm.title">Commercial Fish Farming Profit Calculator</div>
+              <div class="card-sub" data-i18n="farm.sub">Biofloc, RAS or pond — know your cost and profit before you start. Chita gur dosing included.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Commercial form -->
+        <form class="wizard-form-grid" id="comm-form">
+          <div class="field-group">
+            <label for="comm-species" data-i18n="farm.species">Fish species</label>
+            <select id="comm-species">
+              <option value="monosex_tilapia">Tilapia</option>
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="comm-volume" data-i18n="farm.volume">Water volume (liters)</label>
+            <input id="comm-volume" type="number" min="1000" max="200000" step="1000" value="10000" />
+          </div>
+          <div class="field-group">
+            <label for="comm-stock" data-i18n="farm.count">Number of fingerlings</label>
+            <input id="comm-stock" type="number" min="100" max="50000" step="50" value="5000" />
+          </div>
+          <div class="field-group">
+            <label for="comm-init" data-i18n="farm.init">Fingerling weight (g)</label>
+            <input id="comm-init" type="number" min="0.1" max="200" step="0.1" value="20" />
+          </div>
+          <div class="field-group">
+            <label for="comm-target" data-i18n="farm.target">Harvest weight (g)</label>
+            <input id="comm-target" type="number" min="1" max="5000" step="1" value="500" />
+          </div>
+          <div class="field-group">
+            <label for="comm-days" data-i18n="farm.days">Culture days</label>
+            <input id="comm-days" type="number" min="30" max="365" step="1" value="120" />
+          </div>
+          <div class="field-group">
+            <label for="comm-ph" data-i18n="farm.ph">pH</label>
+            <input id="comm-ph" type="number" min="6" max="9" step="0.1" value="7.5" />
+          </div>
+          <div class="field-group">
+            <label for="comm-temp" data-i18n="farm.temp">Water temperature (°C)</label>
+            <input id="comm-temp" type="number" min="15" max="40" step="0.5" value="28" />
+          </div>
+          <div class="field-group">
+            <label for="comm-feed" data-i18n="farm.feed">Feed price (৳/kg)</label>
+            <input id="comm-feed" type="number" min="0" max="500" step="1" value="60" />
+          </div>
+          <div class="field-group">
+            <label for="comm-fry" data-i18n="farm.fry">Fingerling price (৳/pc)</label>
+            <input id="comm-fry" type="number" min="0" max="500" step="0.5" value="12" />
+          </div>
+          <div class="field-group">
+            <label for="comm-price" data-i18n="farm.price">Market price (৳/kg)</label>
+            <input id="comm-price" type="number" min="0" max="2000" step="1" value="180" />
+          </div>
+          <div class="field-group">
+            <label for="comm-system" data-i18n="farm.system">System type</label>
+            <select id="comm-system">
+              <option value="Biofloc Tank" data-i18n="farm.sys1">Biofloc Tank</option>
+              <option value="RAS" data-i18n="farm.sys2">RAS</option>
+              <option value="Extensive Pond" data-i18n="farm.sys3">Semi-Intensive Pond</option>
+            </select>
+          </div>
+
+          <button type="button" class="btn-generate" id="btn-commsim" data-i18n="btn.simulate">
+            <span>📊</span><span>Simulate</span>
+          </button>
+        </form>
+
+        <!-- 4-card KPI row -->
+        <div class="kpi-grid">
+          <div class="kpi hl">
+            <div class="k" data-i18n="kpi.net">Net Profit</div>
+            <div class="v" id="ex-net">—</div>
+            <div class="s" id="ex-net-sub">Net profit</div>
+          </div>
+          <div class="kpi">
+            <div class="k" data-i18n="kpi.roi">Return (ROI)</div>
+            <div class="v" id="ex-roi">—</div>
+            <div class="s" data-i18n="kpi.roi.s">% profit on cost</div>
+          </div>
+          <div class="kpi hl2">
+            <div class="k" data-i18n="kpi.feed">Daily Feed</div>
+            <div class="v" id="ex-feed">—</div>
+            <div class="s" id="ex-fcr">—</div>
+          </div>
+          <div class="kpi hl3">
+            <div class="k" data-i18n="kpi.nh3">Toxic Ammonia</div>
+            <div class="v" id="ex-nh3">—</div>
+            <div class="s"><span id="ex-tan">—</span> · <span id="ex-aer">—</span></div>
+          </div>
+          <div class="kpi">
+            <div class="k" data-i18n="kpi.mol">Molasses Dose</div>
+            <div class="v" id="ex-mol">—</div>
+            <div class="s" data-i18n="kpi.mol.s">to keep water safe</div>
+          </div>
+        </div>
+
+        <!-- Chart + table split -->
+        <div class="commercial-content">
+          <div class="card">
+            <div class="card-title" data-i18n="farm.chart">Fish Growth vs. Feed</div>
+            <div class="chart-legend">
+              <span><span class="chart-key" style="background:#0D9488"></span><span data-i18n="farm.chart1">Total fish weight (kg)</span></span>
+              <span><span class="chart-key" style="background:#D97706"></span><span data-i18n="farm.chart2">Daily feed (kg)</span></span>
+            </div>
+            <canvas id="comm-chart" height="230"></canvas>
+          </div>
+
+          <div class="card">
+            <div class="chart-legend">
+              <span data-i18n="farm.schedule">Weekly Schedule</span>
+            </div>
+            <div class="table-wrap" id="comm-table-wrap"></div>
+            <div class="budget-totals" id="comm-summary"></div>
+            <div style="margin-top:18px" class="no-print">
+              <button class="btn secondary small" id="btn-comm-print" data-i18n="btn.print">Print Care Sheet</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </main>
 
   <footer class="footer no-print">
-    <p>AquaPulse Pro v1.0.0 - Info only; consult an expert for final decisions.</p>
+    <p data-i18n="footer">AquaPulse Pro v1.0.0 - This tool is for guidance only — please consult an expert before deciding.</p>
   </footer>
 
   <div id="toast" class="toast" role="status" aria-live="polite"></div>

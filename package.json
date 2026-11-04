@@ -1,0 +1,13 @@
+{
+  "name": "aquapulse-ui-tools",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "screenshots": "node scripts/capture_screenshots.cjs",
+    "test:ui": "node scripts/verify_ui.cjs",
+    "test:reports": "node --test scripts/test_print_report.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1"
+  }
+}

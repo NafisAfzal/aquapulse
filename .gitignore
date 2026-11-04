@@ -56,3 +56,20 @@ Thumbs.db
 _smoke_*.py
 _verify_*.js
 FINALIZATION_PLAN.md
+
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Development tooling and local helpers
+node_modules/
+.playwright-cli/
+playwright-report/
+test-results/
+scripts/shot.cjs
+push_*.bat
+*.db-wal
+*.db-shm
