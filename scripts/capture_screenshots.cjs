@@ -23,13 +23,14 @@ async function main() {
       await page.waitForFunction(value => document.documentElement.dataset.theme === value, theme);
       await page.mouse.move(0, 0);
       // Allow button feedback and theme styles to settle before the capture.
-      await page.waitForTimeout(700);
+      await page.waitForTimeout(1000);
       const filename = path.join(destination, `${theme}-theme.png`);
       await page.screenshot({ path: filename, fullPage: false, animations: "disabled" });
       const png = fs.readFileSync(filename);
       assert.equal(png.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
       assert.equal(png.readUInt32BE(16), 1440);
       assert.equal(png.readUInt32BE(20), 900);
+      assert.ok(png.length > 20 * 1024, "Screenshot must exceed 20 KB");
       console.log(`Saved ${path.relative(process.cwd(), filename)} (1440 x 900, ${png.length} bytes)`);
     }
     assert.deepEqual(errors, [], "No application runtime errors during capture");

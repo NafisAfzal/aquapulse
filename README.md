@@ -10,9 +10,9 @@ A local aquarium planner with budget-based stocking suggestions, compatibility c
 
 Real browser captures at 1440 x 900. Regenerate them with `npm run screenshots` while the app is running.
 
-| Light | Dark |
-| --- | --- |
-| ![Light theme](docs/light-theme.png) | ![Dark theme](docs/dark-theme.png) |
+![Light Theme](docs/light-theme.png)
+
+![Dark Theme](docs/dark-theme.png)
 
 ## Why it exists
 
@@ -66,7 +66,7 @@ docs/                            # Captures and implementation notes
 Use Python 3.10 or later. These commands use PowerShell on Windows:
 
 ```powershell
-git clone --branch ui-overhaul https://github.com/NafisAfzal/aquapulse.git
+git clone https://github.com/NafisAfzal/aquapulse.git
 cd aquapulse
 python -m venv .venv
 .venv\Scripts\python -m pip install -e ".[dev]"
